@@ -11,14 +11,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: const Color(0xff151617),
+      backgroundColor: const Color(0xff2d6dae),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: const Color(0xff151617),
+        backgroundColor: const Color(0xff3772ae),
         foregroundColor: Colors.white,
-        leading: IconButton(onPressed: () {}, icon: const Icon(IconlyLight.search)),
+        leading:
+            IconButton(onPressed: () {}, icon: const Icon(IconlyLight.search)),
         title: ActionChip(
-          label: const Text("New Jersey"),
+          label: const Text("Nuevo Producto"),
           shape: const StadiumBorder(),
           backgroundColor: const Color(0xff272b30),
           labelStyle: const TextStyle(color: Colors.white),
@@ -47,8 +48,9 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text(
-                    "Find the best to rent",
-                    style: theme.textTheme.headlineMedium?.copyWith(color: Colors.white),
+                    "Top de la Papeleria",
+                    style: theme.textTheme.headlineMedium
+                        ?.copyWith(color: Colors.white),
                   ),
                 ),
                 SizedBox(
@@ -74,13 +76,15 @@ class HomePage extends StatelessWidget {
                             ),
                             Text(
                               category.name,
-                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             )
                           ],
                         ),
                       );
                     },
-                    separatorBuilder: (context, index) => const SizedBox(width: 15),
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(width: 15),
                     itemCount: categories.length,
                   ),
                 )
@@ -89,7 +93,8 @@ class HomePage extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.only(top: 10),
-            constraints: BoxConstraints(minHeight: MediaQuery.of(context).size.height * 0.7),
+            constraints: BoxConstraints(
+                minHeight: MediaQuery.of(context).size.height * 0.7),
             decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
@@ -103,12 +108,13 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Lease again",
-                        style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                        "Tu preferencia",
+                        style: theme.textTheme.titleLarge
+                            ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                       TextButton.icon(
                         onPressed: () {},
-                        icon: const Text("View all"),
+                        icon: const Text("Ver todo"),
                         label: const Icon(IconlyLight.arrowRight2, size: 20),
                       )
                     ],
@@ -126,7 +132,8 @@ class HomePage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ProductDetailsPage(product: product),
+                                builder: (context) =>
+                                    ProductDetailsPage(product: product),
                               ));
                         },
                         child: SizedBox(
@@ -150,7 +157,8 @@ class HomePage extends StatelessWidget {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       SizedBox(
                                         width: 30,
@@ -165,7 +173,9 @@ class HomePage extends StatelessWidget {
                                       const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
-                                          Icon(IconlyBold.star, size: 16, color: Colors.deepOrange),
+                                          Icon(IconlyBold.star,
+                                              size: 16,
+                                              color: Colors.deepOrange),
                                           SizedBox(width: 4),
                                           Text("4.9")
                                         ],
@@ -190,12 +200,14 @@ class HomePage extends StatelessWidget {
                                   children: [
                                     TextSpan(
                                       style: theme.textTheme.bodySmall
-                                          ?.copyWith(fontWeight: FontWeight.bold),
+                                          ?.copyWith(
+                                              fontWeight: FontWeight.bold),
                                       text: "\$${product.price}0",
                                     ),
                                     TextSpan(
                                       style: theme.textTheme.bodySmall
-                                          ?.copyWith(color: Colors.grey.shade600),
+                                          ?.copyWith(
+                                              color: Colors.grey.shade600),
                                       text: " / hr",
                                     )
                                   ],
@@ -208,7 +220,8 @@ class HomePage extends StatelessWidget {
                         ),
                       );
                     },
-                    separatorBuilder: (context, index) => const SizedBox(width: 15),
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(width: 15),
                     itemCount: products.length,
                   ),
                 ),
@@ -218,14 +231,16 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Available Now",
-                        style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                        "Disponible ahora",
+                        style: theme.textTheme.titleLarge
+                            ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 10),
                         padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
-                          color: theme.colorScheme.secondaryContainer.withOpacity(0.5),
+                          color: theme.colorScheme.secondaryContainer
+                              .withOpacity(0.5),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Row(
@@ -240,7 +255,7 @@ class HomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.white,
                               ),
-                              child: Image.asset("assets/drill.png"),
+                              child: Image.asset("assets/8.png"),
                             ),
                             Flexible(
                               child: Column(
@@ -249,9 +264,10 @@ class HomePage extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(bottom: 4),
                                     child: Text(
-                                      "Craftsman Cordless Drill",
+                                      "Marcatextos",
                                       style: theme.textTheme.titleMedium
-                                          ?.copyWith(fontWeight: FontWeight.bold),
+                                          ?.copyWith(
+                                              fontWeight: FontWeight.bold),
                                     ),
                                   ),
                                   Row(
@@ -259,14 +275,17 @@ class HomePage extends StatelessWidget {
                                       const Icon(IconlyBold.location, size: 16),
                                       const Text("4.0km"),
                                       const Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 8.0),
                                         child: Text("\$5.00 /hr"),
                                       ),
                                       Icon(IconlyBold.star,
-                                          size: 16, color: theme.colorScheme.primary),
+                                          size: 16,
+                                          color: theme.colorScheme.primary),
                                       Text(
                                         "4.9",
-                                        style: TextStyle(color: theme.colorScheme.primary),
+                                        style: TextStyle(
+                                            color: theme.colorScheme.primary),
                                       ),
                                     ],
                                   )
@@ -295,11 +314,11 @@ class HomePage extends StatelessWidget {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(IconlyLight.category),
-            label: "Home",
+            label: "Inicio",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
-            label: "Search",
+            label: "Favoritos",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat_bubble_outline_outlined),
@@ -307,7 +326,7 @@ class HomePage extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(IconlyLight.profile),
-            label: "Search",
+            label: "Perfil",
           ),
         ],
       ),
